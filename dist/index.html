@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embeddable Component</title>
+    <!-- Include the bundled JavaScript file -->
+    <script src="./my-embeddable-component.bundle.js"></script>
+</head>
+<body>
+    <!-- Container for your embeddable component -->
+    <div id="chatbot-container"></div>
+    <script>
+        // Initialize the embeddable component when the page loads
+        window.onload = function() {
+            if (window.MyEmbeddableComponent) {
+                window.MyEmbeddableComponent.init('chatbot-container');
+            } else {
+                console.error('MyEmbeddableComponent is not defined');
+            }
+        };
+    </script>
+</body>
+</html>
